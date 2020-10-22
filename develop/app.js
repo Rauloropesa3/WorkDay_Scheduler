@@ -1,7 +1,10 @@
 // bring in moment.js
+
+const moment=require("moment")
 //   check if moment was installed... correctly 
   var x = moment().format();
   console.log(x)
+
 
 //bring in Jquery 
    // checking if we installed Jquery Correctly 
