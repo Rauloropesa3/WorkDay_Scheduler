@@ -1,38 +1,68 @@
-05 Third-Party APIs: Work Day Scheduler
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-You'll need to use the Moment.js library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+WorkDay_Scheduler
+Description
+No need to fall behind when you have a workday scheduler, no more lost notes, no more forgetting tasks. Simply type in your notes and they will be stored for you in Localstorage, where you can retrieve them whenever you wish.
 
-User Story
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
+License
 
-Acceptance Criteria
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-The following animation demonstrates the application functionality:
-
-
-Review
-You are required to submit the following for review:
-
-
-The URL of the deployed application.
-
-
-The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+Table of content
+WorkDay_Scheduler
+Description
+Table of content
+Installation
+Setup
+Usage
+Contributing
+Support/Questions
+License
+Installation
+get started:
+imports!
 
 
 
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+Setup
+
+Windows 10
+Moment.js Library
+Jquery
+
+
+
+Usage
+ 
+jot your thoughts or work tasks, this is a simple tool that will get through your day if used correctly. 
+
+Try it yourself:
+
+https://rauloropesa3.github.io/WorkDay_Scheduler/
+
+Find me on Github:
+
+At Github: https://github.com/Rauloropesa3/WorkDay_Scheduler.git
+
+
+Contributing
+step 1
+
+Option 1
+
+Fork this repo!
+Option 2
+
+Clone thr repo to your local machine
+step 2
+
+Hack Away!!!
+Create a new pull request
+Support/Questions
+Reach out to me if you have any questions!
+
+Via email:
+alexoropes1982@yahoo.com
+License
+License
+
+MIT License
+
+https://opensource.org/license/
