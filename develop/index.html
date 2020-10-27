@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,6 +19,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <title>Work Day Scheduler</title>
   </head>
@@ -27,58 +29,63 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p class="currentDate" class="lead"></p>
     </header>
 
-    <div class="container">
+    <div id="overallContainer">
       <!-- Timeblocks go here -->
-      <div class="row-1 col-1 col-10 col-1">
+    </div>
+
+      <!-- <div class="row-1 col-1 col-10 col-1">
         <span class="white">9am</span> 
-        <input class="gray"style="width: 87%;" type="text">
-        <span class="element saveBtn">💾</span>
+        <input id="past" class="gray"style="width: 87%;" type="text">
+        <span id="saveBtn" class="element "></span>
      </div>
      <div class="row-1 col-1 col-10 col-1">
       <span class="white">10am</span> 
-      <input class="gray"style="width: 87%;" type="text">
-      <span class="element saveBtn" >💾</span>
+      <input id="past" class="gray"style="width: 87%;" type="text">
+      <span id="saveBtn" class="element" ></span>
    </div>
    <div class="row-1 col-1 col-10 col-1">
     <span class="white">11am</span> 
-    <input class="gray"style="width: 87%;" type="text">
-    <span class="element saveBtn" >💾</span>
+    <input id="past" class="gray"style="width: 87%;" type="text">
+    <span id="saveBtn" class="element" ></span>
  </div>
  <div class="row-1 col-1 col-10 col-1">
   <span class="white">12am</span> 
-  <input class="red"style="width: 87%;" type="text">
-  <span class="element saveBtn" >💾</span>
+  <input id="present" class="red"style="width: 87%;" type="text">
+  <span id="saveBtn" class="element" ></span>
 </div>
 <div class="row-1 col-1 col-10 col-1">
   <span class="white">1pm</span> 
-  <input class="green"style="width: 87%;" type="text">
-  <span class="element saveBtn" >💾</span>
+  <input id="future" class="green"style="width: 87%;" type="text">
+  <span id="saveBtn" class="element" ></span>
 </div>
 <div class="row-1 col-1 col-10 col-1">
   <span class="white">2pm</span> 
-  <input class="green"style="width: 87%;" type="text">
-  <span class="element saveBtn" >💾</span>
+  <input id="future" class="green"style="width: 87%;" type="text">
+  <span id="saveBtn" class="element" ></span>
 </div>
 <div class="row-1 col-1 col-10 col-1">
   <span class="white">3pm</span> 
-  <input class="green"style="width: 87%;" type="text">
-  <span class="element saveBtn" >💾</span>
+  <input id="future" class="green"style="width: 87%;" type="text">
+  <span id="saveBtn" class="element" ></span>
 </div>
 <div class="row-1 col-1 col-10 col-1">
   <span class="white">4pm</span> 
-  <input class="green"style="width: 87%;" type="text">
-  <span class="element saveBtn" >💾</span>
+  <input id="future" class="green"style="width: 87%;" type="text">
+  <span id="saveBtn" class="element" ></span>
 </div>
 <div class="row-1 col-1 col-10 col-1">
   <span class="white">5pm</span> 
-  <input class="green"style="width: 87%;" type="text">
-  <span class="element saveBtn" >💾</span>
+  <input id="future" class="green"style="width: 87%;" type="text">
+  <span id="saveBtn" class="element" ></span>
 </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    </div> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>
-</html>
+</html>  
+
+

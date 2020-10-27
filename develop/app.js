@@ -1,40 +1,9 @@
-// bring in moment.js
-
-const moment=require("moment")
-//   check if moment was installed... correctly 
-  var x = moment().format();
-  console.log(x)
-
-
-//bring in Jquery 
-   // checking if we installed Jquery Correctly 
-  var x = $("body")
-  console.log(x)
-
-
-// when openned display the current DATE at the top
-
-// Make TimeBlocks for Buisiness Hours 
-// WHAT ARE BUSINESS HOURS?? (9-5pm)
-// color coded: 
-    // PAST: GREY
-    //PRESENT: RED
-    // Future: GREEN
-
-// make timeblocks clickable, give them an click event
-// enter details about an event on click
-
-// Add a save button with a click event
-// when save btn clicked save it to local storage
-
-//When the page loads, check local storage and render or display what ever data is stored (if its on the current date.)
-
 $(document).ready(function(){
 
-    var currentDateEL = $("#currentDate")
+    var currentDateEL = $(".currentDate")
     var currentTime = moment()
     var formattedDate = currentTime.format( "dddd MMM do YYYY, hh:mm A")
-    var startTime = 8
+    var startTime = 9
     var endTime = 18
   
     // Other ways of getting Current Date
@@ -43,7 +12,7 @@ $(document).ready(function(){
     
     currentDateEL.text(formattedDate)
   
-    var itemsInLocalStorage = localStorage.getItem("dailyPlanner")
+    var itemsInLocalStorage = localStorage.setItem(hour, ".container",text)
     
     if(itemsInLocalStorage == null ){
   
@@ -65,8 +34,7 @@ $(document).ready(function(){
        var currentStuffInLocalStorage = JSON.parse(itemsInLocalStorage)
   
       for (let index = startTime; index < endTime; index++) {
-        var hour = moment().hour(index).format("hh:00 A"
-        )
+        var hour = moment().hour(index).format("hh:00 A")
   
         var text;
          if(currentStuffInLocalStorage[hour] != undefined){
@@ -90,35 +58,46 @@ $(document).ready(function(){
   })
   
   
-  
   function renderTimeSlots (time, colorCode,text){
   
-    var containerEl = $("<div>")
-    containerEl.addClass("container")
-  
+    var containerEl = $("<div>")  
+    containerEl.addClass("row1")
+    $(".row1").append(timeSlotEl);
+    $(".row1").append(inputField);
+    $(".row1").append(saveButton);
+    
+    // var containerEl = $("<div>")
+    // containerEl.addClass("container")
+
     switch(colorCode){
       case "present": 
-        containerEl.attr("style", "background:red")
+        containerEl.attr("style" , "background:maroon")
         break
       case "future": 
-      containerEl.attr("style", "background: green")
+      containerEl.attr("style", "background:green")
         break
       default: 
-      containerEl.attr("style","background:gray")
+      containerEl.attr("style", "background:gray")
+
+
     }
+
+    
   
     var timeSlotEl = $("<div>")
     timeSlotEl.addClass("timeSlot")
     timeSlotEl.text(time)
     
     var inputField = $("<input>")
+    inputField.addClass("inColor")
     inputField.attr("data-time", time)
     if(text){
       inputField.val(text)
     }
   
     var saveButton = $("<button>")
-    saveButton.text("Save")
+    saveButton.addClass("saveBtn")
+    saveButton.text("💾")
   
     saveButton.on("click", onSave)
   
@@ -150,5 +129,8 @@ $(document).ready(function(){
       localStorage.setItem("dailyPlanner", JSON.stringify(currentStuffInLocalStorage))
   
     }
+    
+
     console.log(currentStuffInLocalStorage)
   }
+  
